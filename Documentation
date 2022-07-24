@@ -1,0 +1,102 @@
+---------
+FLUX LIB:
+---------
+
+-------------
+a loadstring:
+-------------
+
+local Flux = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/fluxlib.txt")()
+
+---------
+a window:
+---------
+
+local win = Flux:Window("PREVIEW", "Baseplate", Color3.fromRGB(255, 110, 48), Enum.KeyCode.LeftControl)
+
+------
+a tab:
+------
+
+local tab = win:Tab("Tab 1", "http://www.roblox.com/asset/?id=6023426915")
+
+----------
+a new tab:
+----------
+
+win:Tab("Tab 2", "http://www.roblox.com/asset/?id=6022668888")
+
+---------
+a button:
+---------
+
+tab:Button("Kill all", "This function may not work sometimes and you can get banned.", function()
+
+---------------
+a notification:
+---------------
+
+Flux:Notification("Killed all players successfully!", "Alright")
+end)
+
+--------
+a label:
+--------
+
+tab:Label("This is just a label.")
+
+-------
+a line:
+-------
+
+tab:Line()
+
+---------
+a toggle:
+---------
+
+tab:Toggle("Auto-Farm Coins", "Automatically collects coins for you!", function(t)
+print(t)
+end)
+
+---------
+a slider:
+---------
+
+tab:Slider("Walkspeed", "Makes your faster.", 0, 100,16,function(t)
+print(t)
+end)
+
+-----------
+a dropdown:
+-----------
+
+tab:Dropdown("Part to aim at", {"Torso","Head","Penis"}, function(t)
+print(t)
+end)
+
+--------------
+a colorpicker:
+--------------
+
+tab:Colorpicker("ESP Color", Color3.fromRGB(255,1,1), function(t)
+print(t)
+end)
+
+----------
+a textbox:
+----------
+
+tab:Textbox("Gun Power", "This textbox changes your gun power, so you can kill everyone faster and easier.", true, function(t)
+print(t)
+end)
+
+-------
+a keybind:
+-------
+
+tab:Bind("Kill Bind", Enum.KeyCode.Q, function()
+print("Killed a random person!")
+end)
+
+Thank you for using this! I hope this does dawid a favor. Bye! :D
